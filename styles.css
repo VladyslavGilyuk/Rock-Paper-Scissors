@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'BioRhyme', serif;
 }
 
 body {
@@ -16,7 +19,7 @@ header {
 }
 .score-container {
     margin: 30px auto;
-    padding: 20px;
+    padding: 20px 30px;
     border: 2px solid rgb(231, 223, 213);
     width: 200px;
     text-align: center;
@@ -24,19 +27,19 @@ header {
     position: relative;
 }
 .badge {
-    background-color: brown;
-    color: white;
+    background-color: rgb(216, 208, 193);
+    color: black;
     font-size: 22px;
 }
 #userBadge{
     position: absolute;
-    top: 30px;
-    left: -20px;
+    top: 35px;
+    left: -30px;
 }
 #compBadge{
     position: absolute;
-    top: 30px;
-    right: -25px;
+    top: 35px;
+    right: -33px;
 }
 .result {
     text-align: center;
@@ -55,9 +58,9 @@ header {
 #resultText {
     display: block;
     border: 2px dotted rgb(231, 223, 213);
-    width: 75px;
-    padding: 5px;
-  margin: 0 185px;
+    width: 105px;
+    padding: 10px;
+  margin: 0 160px;
 }
 .choices {
    text-align:center ;
@@ -69,9 +72,16 @@ header {
     margin: 10px;
    transition: all 0.3s ease;
 }
-.choice:hover {
+.choice-hover:hover {
     background-color: rgb(226, 164, 88);
     cursor: pointer;
+}
+
+#reset-btn {
+    padding: 10px;
+    background-color: rgb(231, 223, 213);
+    border-radius: 20px;
+    border: none;
 }
 #action {
     text-align: center;
@@ -98,22 +108,30 @@ header {
     box-shadow: 0 0 10px rgb(176, 173, 173);
 }
 
-@media (max-width: 767px) {
-    
+@media (max-width: 800px) {
+header {
+        font-size: 20px;
+    }
 #resultText {
-    margin: 0 39px;
+    margin: 40px;
 }
 }
 
 @media (max-width: 480px) {
     header {
-      font-size: 25px;
+        font-size: 10px;
     }
-    .result {
+#resultText {
+    margin: 0;
+    font-size:13px;
+    padding: 0;
+    width: 50px;
+}
+.result {
     height:60px;
     }
-    img {
-        width: 70px;
+img {
+        width: 60px;
     }
 
 }

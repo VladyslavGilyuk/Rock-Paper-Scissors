@@ -13,8 +13,8 @@
 </header>
 
     <div class="score-container">
-        <div id="userBadge" class="badge">user</div>
-        <div id="compBadge" class="badge">comp</div>
+        <div id="userBadge" class="badge">USER</div>
+        <div id="compBadge" class="badge">COMP</div>
         <span id="userScore">0</span>:<span id="compScore">0</span>
     </div>
 <div class="result">
@@ -27,17 +27,17 @@
 </div>
 </div>
 <div class="choices">
-    <div class="choice" id="r">
+    <div class="choice choice-hover" id="r">
         <img src="images\rock.png" alt="Rock image">
     </div>
-    <div class="choice" id="p">
+    <div class="choice choice-hover" id="p">
         <img src="images\paper.png" alt="Paper image">
     </div>
-    <div class="choice" id="s">
+    <div class="choice choice-hover" id="s">
         <img src="images\scissors.png" alt="Scissors image">
     </div>
-<p id="action">Make your choice</p>
-
+<p id="action">Make your choice !</p>
+<button id="reset-btn" onclick="resetCount()">Start Again</button>
     
 </body>
 <script src="App.js"></script>

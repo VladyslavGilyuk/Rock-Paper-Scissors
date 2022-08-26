@@ -96,13 +96,20 @@ function game (userChoice) {
         }
 
         userChoicecolored = document.getElementById(userChoice);
-        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 1000)
+        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 300)
         userChoicecolored.classList.add("user-choice-gray");
-        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 1000)
+        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 300)
 }
 function main () {
     rock.addEventListener("click", () => game ("r"))
     paper.addEventListener("click", () => game("p"))
     scissors.addEventListener("click", () => game("s"))
+}
+
+function resetCount () {
+    userScoreCount.innerHTML = 0;
+    compScoreCount.innerHTML = 0;
+    userScore = 0;
+    compScore = 0;
 }
 main()
