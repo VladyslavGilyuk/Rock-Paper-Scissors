@@ -43,6 +43,21 @@ header {
     font-size: 25px;
     color: white;
     margin: 30px;
+    
+}
+#result-container{
+    display: inline-block;
+}
+.resultElements {
+  display: inline-block;
+  vertical-align: middle;
+}
+#resultText {
+    display: block;
+    border: 2px dotted rgb(231, 223, 213);
+    width: 75px;
+    padding: 5px;
+  margin: 0 185px;
 }
 .choices {
    text-align:center ;
@@ -73,9 +88,21 @@ header {
     border: 2px solid rgb(222, 9, 9);
     box-shadow: 0 0 10px rgb(244, 15, 15);
 }
+
 .draw-gray {
+    border: 2px solid rgb(255,255,0);
+    box-shadow: 0 0 10px rgb(255,255,0);
+}
+.user-choice-gray {
     border: 2px solid rgb(103, 101, 101);
     box-shadow: 0 0 10px rgb(176, 173, 173);
+}
+
+@media (max-width: 767px) {
+    
+#resultText {
+    margin: 0 39px;
+}
 }
 
 @media (max-width: 480px) {
@@ -88,4 +115,5 @@ header {
     img {
         width: 70px;
     }
+
 }

@@ -3,10 +3,12 @@ let compScore = 0;
 
 const userScoreCount = document.getElementById("userScore");
 const compScoreCount = document.getElementById("compScore");
-const result = document.querySelector('.result > p');
+const result = document.getElementById('resultText');
 const rock = document.getElementById("r")
 const paper = document.getElementById("p");
 const scissors = document.getElementById("s");
+const userChoiceIcon = document.getElementById("user-choice-icon")
+const compChoiceIcon = document.getElementById("comp-choice-icon")
 
 function getComputerChoice () {
     const computerChoiceArray = ["r", "p", "s"];
@@ -23,30 +25,58 @@ function getProperName(name) {
     } else { return "Scissors"}
 }
 function win (userChoice, compChoice) {
-    userColorResult = document.getElementById(userChoice);
     userScore++;
     userScoreCount.innerHTML = userScore;
-   result.innerHTML = `${getProperName(userChoice)}(user) beats ${getProperName(compChoice)}(comp). You win!`;
-   userColorResult.classList.add("win-green");
-   setTimeout(() => userColorResult.classList.remove("win-green"), 300)
+   result.innerHTML = "WIN!";
+   userChoiceIcon.classList.add("win-green");
+   setTimeout(() => userChoiceIcon.classList.remove("win-green"), 1000)
+   compChoiceIcon.classList.add("lose-red");
+   setTimeout(() => compChoiceIcon.classList.remove("lose-red"), 1000)
 }
 function lose (userChoice, compChoice) {
     userColorResult = document.getElementById(userChoice);
     compScore++;
     compScoreCount.innerHTML = compScore;
-   result.innerHTML = `${getProperName(userChoice)}(user) lose to ${getProperName(compChoice)}(comp). You lost!`;
-   userColorResult.classList.add("lose-red");
-   setTimeout(() => userColorResult.classList.remove("lose-red"), 300)
+   result.innerHTML = "Lost";
+   userChoiceIcon.classList.add("lose-red");
+   setTimeout(() => userChoiceIcon.classList.remove("lose-red"), 1000)
+   compChoiceIcon.classList.add("win-green");
+   setTimeout(() => compChoiceIcon.classList.remove("win-green"), 1000)
 }
 function draw (userChoice, compChoice) {
     userColorResult = document.getElementById(userChoice);
-   result.innerHTML = `${getProperName(userChoice)}(user) equals ${getProperName(compChoice)}(comp). It's a draw!`;
-   userColorResult.classList.add("draw-gray");
-   setTimeout(() => userColorResult.classList.remove("draw-gray"), 300)
+   result.innerHTML = "Draw";
+   userChoiceIcon.classList.add("draw-gray");
+   setTimeout(() => userChoiceIcon.classList.remove("draw-gray"), 1000)
+   compChoiceIcon.classList.add("draw-gray");
+   setTimeout(() => compChoiceIcon.classList.remove("draw-gray"), 1000)
 }
 
 function game (userChoice) {
     const compChoice = getComputerChoice();
+
+    function showUserChoiceIcon () {
+        if (userChoice === "p") {
+            userChoiceIcon.src = "images/ChoiceIllustration/paper.png";
+        } else if (userChoice === "r") {
+            userChoiceIcon.src = "images/ChoiceIllustration/rock.png";
+        } else  {
+            userChoiceIcon.src = "images/ChoiceIllustration/scissors.png";
+        }
+    }
+    showUserChoiceIcon ();
+
+    function showCompChoiceIcon () {
+        if (compChoice === "p") {
+            compChoiceIcon.src = "images/ChoiceIllustration/paper.png";
+        } else if (compChoice === "r") {
+            compChoiceIcon.src = "images/ChoiceIllustration/rock.png";
+        } else  {
+            compChoiceIcon.src = "images/ChoiceIllustration/scissors.png";
+        }
+    }
+    showCompChoiceIcon ();
+    
     switch (userChoice + compChoice) {
         case "rs":
         case "pr":
@@ -64,6 +94,11 @@ function game (userChoice) {
          draw(userChoice, compChoice);
         break;
         }
+
+        userChoicecolored = document.getElementById(userChoice);
+        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 1000)
+        userChoicecolored.classList.add("user-choice-gray");
+        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 1000)
 }
 function main () {
     rock.addEventListener("click", () => game ("r"))
