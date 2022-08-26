@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(105, 80, 80);
+}
+header {
+    background-color: rgb(231, 223, 213);
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+.score-container {
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid rgb(231, 223, 213);
+    width: 200px;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+}
+.badge {
+    background-color: brown;
+    color: white;
+    font-size: 22px;
+}
+#userBadge{
+    position: absolute;
+    top: 30px;
+    left: -20px;
+}
+#compBadge{
+    position: absolute;
+    top: 30px;
+    right: -25px;
+}
+.result {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin: 30px;
+}
+.choices {
+   text-align:center ;
+}
+.choice {
+    display: inline-block;
+    border: 2px solid rgb(231, 223, 213);
+    border-radius: 50%;
+    margin: 10px;
+   transition: all 0.3s ease;
+}
+.choice:hover {
+    background-color: rgb(226, 164, 88);
+    cursor: pointer;
+}
+#action {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.win-green {
+    border: 2px solid rgb(38, 210, 38);
+    box-shadow: 0 0 10px rgb(60, 221, 60);
+}
+.lose-red {
+    border: 2px solid rgb(222, 9, 9);
+    box-shadow: 0 0 10px rgb(244, 15, 15);
+}
+.draw-gray {
+    border: 2px solid rgb(103, 101, 101);
+    box-shadow: 0 0 10px rgb(176, 173, 173);
+}
+
+@media (max-width: 480px) {
+    header {
+      font-size: 25px;
+    }
+    .result {
+    height:60px;
+    }
+    img {
+        width: 70px;
+    }
+}
