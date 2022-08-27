@@ -96,9 +96,9 @@ function game (userChoice) {
         }
 
         userChoicecolored = document.getElementById(userChoice);
-        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 300)
+        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 100)
         userChoicecolored.classList.add("user-choice-gray");
-        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 300)
+        setTimeout(() => userChoicecolored.classList.remove("user-choice-gray"), 100)
 }
 function main () {
     rock.addEventListener("click", () => game ("r"))
