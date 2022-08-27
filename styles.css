@@ -10,6 +10,7 @@
 body {
     background-color: rgb(105, 80, 80);
 }
+
 header {
     background-color: rgb(231, 223, 213);
     padding: 20px;
@@ -17,44 +18,51 @@ header {
     font-size: 35px;
     font-weight: bold;
 }
+
 .score-container {
     margin: 30px auto;
     padding: 20px 30px;
     border: 2px solid rgb(231, 223, 213);
-    width: 200px;
+    width: 320px;
     text-align: center;
     font-size: 40px;
     position: relative;
 }
+
 .badge {
     background-color: rgb(216, 208, 193);
     color: black;
     font-size: 22px;
 }
+
 #userBadge{
     position: absolute;
     top: 35px;
     left: -30px;
 }
+
 #compBadge{
     position: absolute;
     top: 35px;
     right: -33px;
 }
+
 .result {
     text-align: center;
     font-size: 25px;
     color: white;
-    margin: 30px;
-    
+    margin: 30px; 
 }
+
 #result-container{
     display: inline-block;
 }
+
 .resultElements {
   display: inline-block;
   vertical-align: middle;
 }
+
 #resultText {
     display: block;
     border: 2px dotted rgb(231, 223, 213);
@@ -62,9 +70,11 @@ header {
     padding: 10px;
   margin: 0 160px;
 }
+
 .choices {
    text-align:center ;
 }
+
 .choice {
     display: inline-block;
     border: 2px solid rgb(231, 223, 213);
@@ -72,6 +82,7 @@ header {
     margin: 10px;
    transition: all 0.3s ease;
 }
+
 .choice-hover:hover {
     background-color: rgb(226, 164, 88);
     cursor: pointer;
@@ -82,7 +93,15 @@ header {
     background-color: rgb(231, 223, 213);
     border-radius: 20px;
     border: none;
+    font-size: 18px;
+    margin-top: 20px;
 }
+
+#reset-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 20px rgb(176, 173, 173);
+}
+
 #action {
     text-align: center;
     color: white;
@@ -109,29 +128,41 @@ header {
 }
 
 @media (max-width: 800px) {
-header {
-        font-size: 20px;
+    header {
+            font-size: 20px;
+        }
+    #resultText {
+        margin: 40px;
     }
-#resultText {
-    margin: 40px;
-}
 }
 
 @media (max-width: 480px) {
     header {
-        font-size: 10px;
+            font-size: 10px;
+            }
+    .score-container {
+            width: 220px;
+            font-size: 30px;
+            }
+    #userBadge{
+            top: 28px;
+            left: -35px;
+            }
+    #compBadge{
+            position: absolute;
+            top: 28px;
+            right: -37px;
+            }
+    #resultText {
+        margin: 0;
+        font-size:13px;
+        padding: 0;
+        width: 50px;
     }
-#resultText {
-    margin: 0;
-    font-size:13px;
-    padding: 0;
-    width: 50px;
-}
-.result {
-    height:60px;
-    }
-img {
+    .result {
+        height:60px;
+        }
+    img {
         width: 60px;
-    }
-
+        }
 }
