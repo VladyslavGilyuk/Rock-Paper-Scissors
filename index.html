@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Tic-Tac-Toe</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    <!--Title-->
-    <header>
-        <h1>Rock Paper Scissors</h1>
-    </header>
-    <main>
-        <!--Score section-->
-        <div class="score-container">
-            <p id="userBadge" class="badge">USER</p>
-            <p id="compBadge" class="badge">COMP</p>
-            <span id="userScore">0</span>:<span id="compScore">0</span>
-        </div>
-        <!-- Current results section -->
-        <div class="result">
-            <div id="result-container">
-                <img class="choice resultElements" id="user-choice-icon"  src="images\scissors.png" alt="Your Choice Image">
-                <p id="resultText" class="resultElements">Result</p>
-                <img class="choice resultElements" id="comp-choice-icon" src="images\scissors.png" alt="Comp Choice Image">
-            </div>
-        </div>
-        <!-- Possible choices section -->
-        <div class="choices">
-            <img  class="choice choice-hover" id="r" src="images\rock.png" alt="Rock image">
-            <img class="choice choice-hover" id="p" src="images\paper.png" alt="Paper image">
-            <img class="choice choice-hover" id="s" src="images\scissors.png" alt="Scissors image">
-        </div>
-    </main>
-    <footer>
-        <p id="action">Make your choice !</p>
-        <button id="reset-btn" onclick="resetCount()">Start Again</button>
-    </footer>
-</body>
+  <!--Title-->
+  <header>
+    <h1>Rock Paper Scissors</h1>
+  </header>
+  <main>
+    <!--Score section-->
+    <div class="score-container">
+      <p id="userBadge" class="badge">USER</p>
+      <p id="compBadge" class="badge">COMP</p>
+      <span id="userScore">0</span>:<span id="compScore">0</span>
+    </div>
+    <!-- Current results section -->
+    <div class="result">
+      <div id="result-container">
+        <img class="choice resultElements" id="user-choice-icon"  src="images\scissors.png" alt="Your Choice Image">
+        <p id="resultText" class="resultElements">Result</p>
+        <img class="choice resultElements" id="comp-choice-icon" src="images\scissors.png" alt="Comp Choice Image">
+      </div>
+    </div>
+    <!-- Possible choices section -->
+    <div class="choices">
+      <img  class="choice choice-hover" id="r" src="images\rock.png" alt="Rock image">
+      <img class="choice choice-hover" id="p" src="images\paper.png" alt="Paper image">
+      <img class="choice choice-hover" id="s" src="images\scissors.png" alt="Scissors image">
+    </div>
+  </main>
+  <footer>
+    <p id="action">Make your choice !</p>
+    <button id="reset-btn" onclick="resetCount()">Start Again</button>
+  </footer>
+
 <script src="App.js"></script>
+
+</body>
 </html>
